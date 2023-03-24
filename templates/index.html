@@ -1,0 +1,49 @@
+<!-- include the base template -->
+{% extends 'base.html' %}
+
+<!-- set the page title -->
+{% block title %}Home Page{% endblock %}
+
+<!-- output this content into the main -->
+{% block content %}
+
+    <article class="bg-stone-100 shadow shadow-lg m-6 p-4">
+        <header>
+            <h2 class="pt-4 pb-8 text-4xl">Main area</h2>
+        </header>
+        <p class="py-2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+            ad alias cumque dignissimos doloremque
+            eos, esse explicabo id inventore iusto, molestias porro quisquam sit,
+            sunt velit veniam vitae voluptate
+            voluptatum.
+        </p>
+        <p class="py-2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis distinctio,
+            id maxime pariatur quo
+            suscipit ullam. At atque, ducimus earum fuga hic iusto minus nemo perspiciatis
+            quia quisquam ratione,
+            vero!
+        </p>
+    </article>
+    <article class="bg-stone-100 shadow shadow-lg m-6 p-4">
+        <header>
+            <h2 class="pt-4 pb-8 text-4xl">PyCharm (and other JetBrains editor) Plugins</h2>
+        </header>
+        <p class="py-4">
+            Use
+            <kbd class="bg-black text-gray-200 rounded px-1 mx-1">CTRL</kbd>
+            <kbd class="bg-black text-gray-200 rounded px-1 mx-1">ALT</kbd>
+            <kbd class="bg-black text-gray-200 rounded px-1 mx-1">S</kbd>
+            to open settings</p>
+        <p class="py-2">Install these plugins:</p>
+        <ul>
+            <li class="pb-2 ml-4">.ignore</li>
+            <li class="pb-2 ml-4">.env file support</li>
+            <li class="pb-2 ml-4">Rainbow Brackets</li>
+            <li class="pb-2 ml-4">CSV Editor</li>
+            <li class="pb-2 ml-4">Requirements</li>
+            <li class="pb-2 ml-4"></li>
+        </ul>
+    </article>
+{% endblock %}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Include the Tailwind CSS Playground -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- div.container>header+main+footer [TAB] -->
+<div class="container mx-auto">
+    <header class="bg-black text-gray-300 p-4">
+        <h1 class="text-3xl">IIoT Flask Demo</h1>
+        <nav class="pt-2">
+            <!-- ul>li*5>a[href=#]{Link $} -->
+            <ul class="flex flex-row text-md gap-4">
+                <li>
+                    <a href="{{ url_for('index') }}"
+                       class="text-lime-500 hover:text-purple-500 transition ease-in-out duration-500
+                               border border-gray-900 border-4 border-t-0 border-x-0
+                               hover:border-red-500 px-1">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('test') }}"
+                       class="text-lime-500 hover:text-purple-500 transition ease-in-out duration-500
+                               border border-gray-900 border-4 border-t-0 border-x-0
+                               hover:border-red-500 px-1">
+                        Test
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('passing') }}"
+                       class="text-lime-500 hover:text-purple-500 transition ease-in-out duration-500
+                               border border-gray-900 border-4 border-t-0 border-x-0
+                               hover:border-red-500 px-1">
+                        Passing Data
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('test_fail') }}"
+                       class="text-lime-500 hover:text-purple-500 transition ease-in-out duration-500
+                               border border-gray-900 border-4 border-t-0 border-x-0
+                               hover:border-red-500 px-1">
+                        Failing Test
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="text-lime-500 hover:text-purple-500 transition ease-in-out duration-500
+                               border border-gray-900 border-4 border-t-0 border-x-0
+                               hover:border-red-500 px-1">
+                        Link 5
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="shadow shadow-lg">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="flex p-4">
+        <div class="px-8">
+            <p>&copy; Copyright 2023, YOUR NAME.</p>
+            <p>All rights reserved</p>
+        </div>
+        <div class="flex-grow"></div>
+        <div class="px-8 text-sm">
+            <p class="font-bold">Links</p>
+            <!-- ul>li*5>a[href=#]{Link $} -->
+
+            <ul class="flex flex-row gap-4">
+                <li><a href="#" class="text-blue-800 hover:text-amber-500 ease-in-out transition duration-1000">Link
+                    1</a></li>
+                <li><a href="#" class="text-blue-800 hover:text-amber-500 ease-in-out transition duration-1000">Link
+                    2</a></li>
+                <li><a href="#" class="text-blue-800 hover:text-amber-500 ease-in-out transition duration-1000">Link
+                    3</a></li>
+                <li><a href="#" class="text-blue-800 hover:text-amber-500 ease-in-out transition duration-1000">Link
+                    4</a></li>
+                <li><a href="#" class="text-blue-800 hover:text-amber-500 ease-in-out transition duration-1000">Link
+                    5</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
